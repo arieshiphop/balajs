@@ -1,5 +1,5 @@
 //declare file as module
-import { Engine } from "./core/Engine.js";
+import { Engine } from "../core/Engine.js";
 
 const template = `
     <template>
@@ -8,11 +8,16 @@ const template = `
             <p>{{content}}</p>
         </div>
     </template>
-
+    
+    <style>
+        *{
+            color:red;
+        }
+    </style>
 `;
 const data = {
-  title: "Hello claudio",
-  content: "This is a claudio test",
+  title: "Hello adios",
+  content: "This is a iker test",
 };
 
 let engine = new Engine(template, data);

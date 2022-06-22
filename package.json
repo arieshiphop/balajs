@@ -4,11 +4,7 @@
   "description": "Balajs is a javascript fast and efficient framework.",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "serve": "http-server",
-    "listen": "nodemon ./index.js localhost 8080",
-    "dev": "npm run listen & npm run serve "
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arieshiphop/balajs.git"
@@ -27,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/arieshiphop/balajs/issues"
   },
-  "homepage": "https://github.com/arieshiphop/balajs#readme"
+  "homepage": "https://github.com/arieshiphop/balajs#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2"
+  },
+  "dependencies": {
+    "uglify-js": "^3.16.1"
+  }
 }

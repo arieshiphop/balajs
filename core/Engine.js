@@ -1,5 +1,5 @@
 import fs from "fs";
-import exec from "child_process";
+
 export class Engine {
   constructor(template, data) {
     this.template = template;
@@ -12,25 +12,28 @@ export class Engine {
     let content = this.template.substring(start + 10, end);
     return content;
   }
+  getStylesContent() {
+    let start = this.template.indexOf("<style>");
+    let end = this.template.indexOf("</style>");
+    let content = this.template.substring(start + 10, end);
+    return content;
+  }
   render() {
-    //obtenemos el contenido del <template> </template>
     let content = this.getTemplateContent();
-    //remplazamos {{dato}} por su dato en [data]
+    content += '<link rel="stylesheet" href="styles.css">';
     for (let key in this.data) {
       let value = this.data[key];
       content = content.replace(new RegExp(`{{${key}}}`, "g"), value);
     }
-    //procesamos el contenido
     content = this.proccesContent(content);
-    //lo guardamos
-    this.saveTextOnFile(content, "index.html");
+    this.saveTextOnFile(content, "src/index.html");
+
     return content;
   }
   proccesContent(content) {
-    content = content.trim();
+    content = content = content.trim();
     return content;
   }
-  openHtmlOnLocalhostLive() {}
   saveTextOnFile(content, file) {
     fs.writeFile(file, content, function (err) {
       if (err) {
