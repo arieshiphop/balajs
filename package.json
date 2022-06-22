@@ -1,0 +1,31 @@
+{
+  "name": "balajs",
+  "version": "1.0.0",
+  "description": "Balajs is a javascript fast and efficient framework.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "serve": "http-server",
+    "listen": "nodemon ./index.js localhost 8080",
+    "dev": "npm run listen & npm run serve "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arieshiphop/balajs.git"
+  },
+  "keywords": [
+    "frameworj",
+    "js",
+    "javascript",
+    "js",
+    "framework",
+    "javascript",
+    "framework"
+  ],
+  "author": "Ikerdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arieshiphop/balajs/issues"
+  },
+  "homepage": "https://github.com/arieshiphop/balajs#readme"
+}
