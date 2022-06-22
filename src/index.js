@@ -6,19 +6,24 @@ const template = `
         <div>
             <h1>{{title}}</h1>
             <p>{{content}}</p>
+            <ul>
+                <li for="let item of items"></li>
+            </ul>
         </div>
     </template>
     
     <style>
         *{
-            color:red;
+            color:black;
         }
     </style>
 `;
 const data = {
-  title: "Hello adios",
+  title: "Hola",
   content: "This is a iker test",
+  items:["hola","que","tal"],
 };
 
 let engine = new Engine(template, data);
+engine.setForHtmlValues("li", "for");
 engine.render();
