@@ -19,19 +19,21 @@ export class Engine {
     return content;
   }
   render() {
-    let content = this.getTemplateContent();
-    content += '<link rel="stylesheet" href="styles.css">';
+    let html = this.getTemplateContent();
+    let css = this.getStylesContent();
+    // content += '<link rel="stylesheet" href="styles.css">';
+    
     for (let key in this.data) {
       let value = this.data[key];
-      content = content.replace(new RegExp(`{{${key}}}`, "g"), value);
+      html = html.replace(new RegExp(`{{${key}}}`, "g"), value);
     }
-    content = this.proccesContent(content);
-    this.saveTextOnFile(content, "src/index.html");
+    this.saveTextOnFile(html, "src/index.html");
+    this.saveTextOnFile(css, "src/styles.css");
 
     return content;
   }
   proccesContent(content) {
-    content = content = content.trim();
+    content;
     return content;
   }
   saveTextOnFile(content, file) {
