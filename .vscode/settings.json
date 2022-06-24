@@ -1,0 +1,12 @@
+{
+    "emeraldwalk.runonsave": {
+
+        "commands": [
+            {
+                "match": ".*",
+                "isAsync": true,
+                "cmd": "node ./src/index.js & workbench.action.files.saveAll"
+            },
+        ]
+    }
+}
