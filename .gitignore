@@ -1,1 +1,6 @@
 node_modules
+src/index.html
+src/index.js
+src/index.jsx
+src/index.ts
+src/styles.css

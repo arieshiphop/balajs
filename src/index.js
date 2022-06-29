@@ -1,29 +1,29 @@
-//declare file as module
 import { Engine } from "../core/Engine.js";
 
 const template = `
     <template>
-        <div>
-            <h1>{{title}}</h1>
-            <p>{{content}}</p>
-            <ul>
-                <li for="let item of items"></li>
-            </ul>
-        </div>
+        <h1 color="red">{{camelia_name}}</h1>
+        <p>{{camelia_description}}</p>
+        <h2>{{jose_name}}</h2> 
     </template>
-    
     <style>
-        *{
-            color:black;
+        h1{
+            color: yellow;
         }
+        p{
+            color:red;
+        }
+        h2{
+            color:blue;
+        }
+
     </style>
 `;
 const data = {
-  title: "Hola",
-  content: "This is a iker test",
-  items:["hola","que","tal"],
+  camelia_name: "Iker",
+  camelia_description: "Camelia is a web application framework for the browser",
+  jose_name: "Jose",
 };
 
 let engine = new Engine(template, data);
-engine.setForHtmlValues("li", "for");
 engine.render();
